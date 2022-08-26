@@ -26,6 +26,9 @@ const contenedorCarritoCompras = document.querySelector("#items")
 
 const contenedorFooterCarrito = document.querySelector("#footer");
 
+//storage
+
+
 /* Ejecución de funciones*/
 
 cargarProductos();
