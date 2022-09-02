@@ -1,50 +1,106 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" href="css\bootstrap.min.css">
-	<script src="js\bootstrap.bundle.min.js"></script>
+	<link rel="stylesheet" href="/mi_repo1/css/bootstrap.min.css">
+	<script src="/mi_repo1/js/bootstrap.bundle.min.js"></script>
+    <script defer src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<meta name="keywords" content="AlMOHADILLAS, SEMILLAS , PRODUCTOS , DISEÑOS, PERSONALIZACION, CERVICAL , DOLORES , MUSCULARES"> 
+	<meta name="description" content="Almohadillas de semillas - NUESTROS PRODUCTOS SON HECHOS CON TELAS DE CALIDAD Y COSTURA A MANO , PRODUCTOS COMO CARTUCHERAS , ALMOHADILLAS , CARTUCHERAS , LONAS PLAYERAS Y MAS . DISEÑOS 
+	PERSONALIZADOS , CONTAMOS CON UN CATALOGO DE DISEÑOS.">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="keywords" content="AlMOHADILLAS, SEMILLAS , REDES , INSTAGRAM, FACEBOOK "> 
-	<meta name="description" content="BUSCANOS EN LAS TODAS LAS REDES SOCIALES  ( FACEBOOK , INSTAGRAM ) , CONTAMOS CON ATENCION AL CLIENTE LAS 24hs NO DUDES EN HABLARNOS ">
-	<title>Hecho a Mano- Redes</title>
-	<link rel="shortcut icon" href="fotos\logo.jpg">
-	<link rel="stylesheet" href="scss/style.css">
+	<title>Hecho a Mano - Productos</title>
+	<link rel="shortcut icon" href="/mi_repo1/fotos/logo.jpg">
+	<link rel="stylesheet" href="/mi_repo1/scss/style.css">
+	<script defer src="/mi_repo1/js/inicio.js"></script>
 </head>
 
 <body class="Fondo">
 <header>
 	<nav class="navbar" style="background-color: rgb(142, 120, 120);">
+
 	  <div  class="container-fluid">
-			<a class="navbar-brand" href="/mi_repo1/index.html"> Hecho a Mano</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+		<a class="navbar-brand" href="index.html"> Hecho a Mano</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 		  <span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
-		 	<div class="navbar-nav">
-			<a class="nav-link" href="index.html">Inicio</a>
-			<a class="nav-link" href="sobrenosotros.html">Sobre Nosotros</a>
-			<a class="nav-link" href="productos.html">Productos</a>
-			<a class="nav-link" href="contacto.html">Contacto</a>
-			<a class="nav-link" href="redes.html">Publicaciones</a>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
+		  <div class="navbar-nav">
+			<a class="nav-link" href="/mi_repo1/index.html">Inicio</a>
+			<a class="nav-link" href="/mi_repo1/pages/sobrenosotros.html">Sobre Nosotros</a>
+			<a class="nav-link" href="/mi_repo1/pages/productos.html">Productos</a>
+			<a class="nav-link" href="/mi_repo1/pages/contacto.html">Contacto</a>
+			<a class="nav-link" href="/mi_repo1/pages/redes.html">Publicaciones</a>
+			
 		  </div>
 		</div>
 	  </div>
-	</nav>
+	</nav>	
+		
 </header>
+<br>
+<!-- Button trigger modal -->
+<button style="background-color: rgb(142, 120, 120); border:none;" id="toggleMyModal" type="button"  class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+	Ver carrito de compras <i class="bi bi-bag-check-fill"></i>
+</button>
+<h2>Productos:</h2>
 
-<section>
-	<article class="bordeif">
-		<h2>Video demostrativo</h2>
-		<iframe class="iframe" width="560" height="315" src="https://www.youtube.com/embed/j5FCOornPn4?start=5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		<h3>Podes buscarnos en:</h3>
-		<div >
-		<a class="RedSoc" href="https://www.instagram.com/hecho_a_mano.pa/" target="_blank">INSTAGRAM</a>
-		<a class="RedSoc" href="https://www.facebook.com/profile.php?id=100063674165452" target="_blank">FACEBOOK</a>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+			<h5 class="modal-title" id="exampleModalLabel">Carrito</h5>
+			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="container">
+					<table class="table">
+						<thead>
+							<tr>
+							<th scope="col">ID</th>
+							<th scope="col">Nombre</th>
+							<th scope="col">Cantidad</th>
+							<th scope="col">Precio</th>
+							<th scope="col">Total</th>
+							<th scope="col"></th>
+							</tr>
+						</thead>
+						<tbody id="items"></tbody>
+						<tfoot>
+							<tr id="footer">
+							<th scope="row" colspan="6">Carrito vacío - comience a comprar!</th>
+							</tr>
+						</tfoot>
+						</table>
+					<div class="row" id="cards"></div>
+				</div>
+			
+			</div>
+			<div class="modal-footer">
+			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+			<button type="button" class="btn btn-primary">Terminar compra</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<br />
+
+<section class="d-flex justify-content-center mt-5" >
+	<article class="container" style="text-align:center;" >
+		<div id="contenedor-productos" class="row row-cols-1 row-cols-md-3 g-4">
+			<div class="card m-3 p-3">
+				<img src="/mi_repo1/fotos/cervical3.jpg" class="card-img-top" alt="Cervical">
+				<div class="card-body">
+					<h5>Cervical</h5>
+					<p>$100 USD</p>
+					<button class="btn btn-success">Comprar</button>
+				</div>
+			</div>
 		</div>
 	</article>
 </section>
-<br>
+
 
 <footer>
 	<a class="pie" href="https://www.instagram.com/hecho_a_mano.pa/" target="_blank"> <img src="data:image/png;base64,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"  alt="Instagram"></a>

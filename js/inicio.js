@@ -39,12 +39,12 @@ dibujarCatalogoProductos();
 /* Definiciones de funciones*/
 
 function cargarProductos() {
-    productos.push(new Producto(1, 'Cervical', 100, './fotos/cervical3.jpg'));
-    productos.push(new Producto(2, 'Cartuchera', 120, './fotos/cartucheragliter.jpg'));
-    productos.push(new Producto(3, 'Bolsita', 80, './fotos/bolsita.jpg'));
-    productos.push(new Producto(4, 'Cartuchera de tela', 110, './fotos/cartucherastela.jpg'));
-    productos.push(new Producto(5, 'Lona circular', 70, './fotos/lonacircular.jpg'));
-    productos.push(new Producto(6, 'Lona rectangular', 70, './fotos/lonarectangular.jpg'))
+    productos.push(new Producto(1, 'Cervical', 100, '/mi_repo1/fotos/cervical3.jpg'));
+    productos.push(new Producto(2, 'Cartuchera', 120, '/mi_repo1/fotos/cartucheragliter.jpg'));
+    productos.push(new Producto(3, 'Bolsita', 80, '/mi_repo1/fotos/bolsita.jpg'));
+    productos.push(new Producto(4, 'Cartuchera de tela', 110, '/mi_repo1/fotos/cartucherastela.jpg'));
+    productos.push(new Producto(5, 'Lona circular', 70, '/mi_repo1/fotos/lonacircular.jpg'));
+    productos.push(new Producto(6, 'Lona rectangular', 70, '/mi_repo1/fotos/lonarectangular.jpg'))
 }
 
 function cargarCarrito() {
